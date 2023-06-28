@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "955276bf-eccd-45fd-80fa-5a6a87ab6b37",
+		"name": "safe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16866075"
+	},
+	"item": [
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "create car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plateNo\":\"RAB987G\",\n    \"ownerName\":\"MIHIGO Yves\",\n    \"telephone\":\"0786278347\",\n    \"ownerEmail\":\"ymihigo7@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/safeParking/newCar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"safeParking",
+								"newCar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car visit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\":100,\n    \"plateNo\":\"RAB986G\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/safeParking/visit/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"safeParking",
+								"visit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/safeParking/deleteCar/4eee9ea2-fddf-42e4-b607-217ffa8d8133",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"safeParking",
+								"deleteCar",
+								"4eee9ea2-fddf-42e4-b607-217ffa8d8133"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create price",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\":\"NORMAL\",\n    \"amount\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/safeParking/price/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"safeParking",
+								"price",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/safeParking/price/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"safeParking",
+								"price",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/safeParking/findAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"safeParking",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
